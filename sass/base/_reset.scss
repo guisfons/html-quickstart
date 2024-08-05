@@ -1,0 +1,42 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+html {
+    font-size: 50%;
+    scroll-behavior: smooth;
+}
+body {
+    box-sizing: border-box;
+    position: relative;
+    // font-family: "Gabarito", sans-serif;
+    font-optical-sizing: auto;
+}
+main {
+    position: relative;
+    margin-top: 0px;
+    transition: .3s ease-in-out;
+}
+img {
+    max-width: 100%;
+}
+a {
+    color: inherit;
+    text-decoration: none;
+}
+input, button, textarea, select {
+    appearance: none;
+    border: none;
+    outline: none;
+    font-family: inherit;
+    font-weight: inherit;
+}
+
+.wrapper {
+    margin: 0 auto;
+    width: 90%;
+    max-width: 1050px;
+}

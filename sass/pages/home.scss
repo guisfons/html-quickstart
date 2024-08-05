@@ -1,0 +1,261 @@
+@import '../abstracts/variables';
+@import '../abstracts/utilities';
+
+.banner {
+    height: 100vh;
+    max-height: 100vh;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+
+    position: relative;
+
+    video {
+        width: 100vw;
+        height: 100vh;
+        object-fit: cover;
+
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+    }
+
+    span {
+        font-size: 7.2rem;
+        font-weight: 800;
+        text-transform: uppercase;
+        text-align: center;
+        color: $white;
+        position: relative;
+        margin-top: 10%;
+
+        @include max (800) {
+            font-size: 4.5rem;
+            width: 90%;
+        }
+    }
+}
+
+.p-existe {
+    margin: 10.2rem auto 13.9rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 3.6rem;
+
+    h2 {
+        font-size: 4.8rem;
+        font-weight: 800;
+        line-height: 1;
+        margin-bottom: 10rem;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-transform: uppercase;
+        text-align: center;
+        width: 100%;
+
+        @include max (800) {
+            font-size: 3.8rem;
+        }
+
+        span {
+            background-image: url('../img/title-bg.webp');
+            background-clip: text;
+            background-attachment: fixed;
+            
+            font-size: 15rem;
+            width: fit-content;
+            color: rgba(0, 0, 0, 0);
+
+            @include max (800) {
+                font-size: 8rem;
+            }
+        }
+    }
+
+    article {
+        aspect-ratio: 1;
+        max-width: 23.5rem;
+        width: 100%;
+        height: 23.5rem;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+
+        position: relative;
+
+        font-size: 1.6rem;
+        font-weight: 500;
+        color: $black;
+        text-align: center;
+
+        cursor: default;
+
+        &:hover {
+            figure {
+                opacity: 0;
+                visibility: hidden;
+            }
+
+            p {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+
+        figure {
+            position: absolute;
+            max-width: 10.5rem;
+
+            opacity: 1;
+            visibility: visible;
+            transition: .3s ease-in-out;
+
+            img {
+                object-fit: contain;
+            }
+        }
+
+        p {
+            max-width: 18rem;
+            width: 100%;
+
+            opacity: 0;
+            visibility: hidden;
+            transition: .3s ease-in-out;
+        }
+    }
+}
+
+.servico {
+    background-color: $timberwolf;
+    padding: 8.1rem 0;
+
+    .wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        gap: 5.7rem;
+
+        article {
+            max-width: 43.3rem;
+            width: 100%;
+            white-space: break-spaces;
+
+            @include max (800) {
+                max-width: 100%;   
+            }
+
+            h3 {
+                font-size: 4.8rem;
+                font-weight: 800;
+                color: #3F5235;
+                white-space: nowrap;
+
+                margin-top: 5.2rem;
+
+                @include max (800) {
+                    font-size: 3.8rem;
+                    white-space: normal;
+                }
+
+                strong {
+                    color: #5F9341;
+                }
+            }
+
+            p {
+                font-size: 2.4rem;
+                line-height: 3.6rem;
+            }
+        }
+
+        figure {
+            max-width: 55.8rem;
+            width: 100%;
+            height: 66.8rem;
+
+            object-fit: cover;
+            border-radius: 25.3rem;
+            overflow: hidden;
+
+            @include max (800) {
+                max-width: 100%;    
+                border-radius: 2rem;
+            }
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+}
+
+.d-sustentavel {
+    display: flex;
+    flex-direction: column;
+    gap: 9.5rem;
+    margin: 10.8rem auto 14rem;
+
+    &__titulo {
+        font-size: 3.6rem;
+
+        strong {
+            color: #5F9341;
+        }
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        gap: 2rem 7.1rem;
+
+        @include min (801) {
+            &:nth-of-type(even) {
+                figure {
+                    order: 1;
+                }
+            }   
+        }
+
+        @include max (800) {
+            flex-direction: column;       
+            justify-content: center;
+            text-align: center;
+        }
+
+        figure {
+            max-width: 18.5rem;
+            width: 100%;
+
+            img {
+                object-fit: contain;
+            }
+        }
+
+        article {
+            white-space: break-spaces;
+        }
+
+        p {
+            font-size: 2.4rem;
+            line-height: 2.7rem;
+
+            &:nth-of-type(1) {
+                font-size: 3rem;
+                font-weight: 600;
+                line-height: 3.4rem;
+            }
+        }
+    }
+}

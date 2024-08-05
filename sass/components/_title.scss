@@ -1,0 +1,48 @@
+.title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4.5rem;
+
+    max-width: 140rem;
+    width: 90%;
+    padding: 10.9rem 0 13.7rem;
+    margin: 0 auto;
+
+    @include max (600) {
+        gap: 0;
+    }
+
+    &::before, &::after {
+        content: '';
+        min-width: 5.787rem;
+        min-height: 6.125rem;
+        background-image: url('../img/icons/leaf.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+
+        @include max (330) {
+            display: none;
+        }
+    }
+
+    &::after {
+        transform: scaleX(-1);
+    }
+
+    h1 {
+        background-image: url('../img/title-bg.webp');
+        background-clip: text;
+        background-attachment: fixed;
+        
+        font-size: 13.2rem;
+        text-transform: uppercase;
+        text-align: center;
+        width: fit-content;
+        color: rgba(0, 0, 0, 0);
+
+        @include max (800) {
+            font-size: 7rem;
+        }
+    }
+}
